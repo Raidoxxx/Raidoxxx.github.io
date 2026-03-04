@@ -1,0 +1,415 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de João Raidoxx, desenvolvedor full stack, venha conhecer meu trabalho.">
+  <meta name="theme-color" content="#0f172a">
+  <title>João Raidoxx | Desenvolvedor Full Stack</title>
+
+  <meta property="og:title" content="João Raidoxx | Desenvolvedor Full Stack">
+  <meta property="og:description" content="Portfólio profissional com projetos, skills e contato.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body class="theme-pro">
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#inicio">João "Raidoxx"</a>
+      <nav aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#sobre" data-i18n="nav_about">Sobre</a></li>
+          <li><a href="#projetos" data-i18n="nav_projects">Projetos</a></li>
+          <li><a href="#experiencia" data-i18n="nav_experience">Experiência</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contato" data-i18n="nav_contact">Contato</a></li>
+        </ul>
+      </nav>
+      <a class="header-cta" href="#contato" data-i18n="header_cta">Disponível para Freelancer</a>
+      <button id="langToggle" class="lang-toggle" type="button" aria-label="Switch language">EN</button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero container">
+      <div class="hero-left">
+        <p class="hero-tag" data-i18n="hero_tag">Desenvolvedor Full Stack</p>
+        <h1 data-i18n="hero_title">Desenvolvedor Full Stack focado em produto e performance.</h1>
+
+        <p class="hero-text" data-i18n="hero_text">
+          Construo interfaces e APIs com foco em UX, métricas e manutenção.
+          React, Node.js e PostgreSQL para transformar necessidades de negócio em software confiável.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projetos"><i class='bx bx-show-alt'></i><span data-i18n="hero_btn_projects">Ver projetos</span></a>
+          <a class="btn btn-secondary" href="#contato"><i class='bx bx-message-rounded-dots'></i><span data-i18n="hero_btn_contact">Falar comigo</span></a>
+        </div>
+
+        <p class="hero-links">
+          <a href="https://github.com/Raidoxxx" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span>•</span>
+          <a href="https://www.linkedin.com/in/jo%C3%A3ovitorgomesmartins/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <span>•</span>
+          <a href="../assets/cv.pdf" target="_blank" rel="noopener noreferrer" data-i18n="hero_cv">Currículo</a>
+        </p>
+
+        <ul class="hero-stats" aria-label="Indicadores profissionais">
+          <li><strong>3+</strong><span data-i18n="stat_projects">projetos autorais</span></li>
+          <li><strong>4+</strong><span data-i18n="stat_years">anos de estudo contínuo</span></li>
+          <li><strong>100%</strong><span data-i18n="stat_quality">foco em qualidade</span></li>
+        </ul>
+      </div>
+
+      <aside class="hero-right" aria-label="Foto de perfil">
+        <div class="hero-blob">
+          <img
+            src="../images/minha-foto.png"
+            alt="Foto de João Raidoxx"
+            loading="eager"
+            decoding="async"
+          >
+        </div>
+        <p class="hero-caption" data-i18n="hero_caption">Disponível para freelancer • Remoto/Brasil</p>
+      </aside>
+    </section>
+
+    <section id="sobre" class="container section">
+      <div class="section-title">
+        <p data-i18n="about_tag">Sobre</p>
+        <h2 data-i18n="about_title">Pronto para contribuir com seu projeto e crescer junto</h2>
+      </div>
+      <div class="about-grid">
+        <article>
+          <h3 data-i18n="about_profile_title">Perfil</h3>
+          <p data-i18n="about_profile_text">
+            Transformei um hobby de infância em disciplina técnica. Hoje, meu objetivo é ajudar empresas a criar produtos digitais incríveis, enquanto continuo me desenvolvendo
+            para evoluir minha carreira e contribuir cada vez mais.
+          </p>
+        </article>
+        <article>
+          <h3 data-i18n="about_work_title">Como trabalho</h3>
+          <p data-i18n="about_work_text">
+            Primeiro, entendo a ideia e o público-alvo. Depois, planejo a estrutura e o design, focando em usabilidade e performance.
+             Por fim, codifico com atenção aos detalhes, garantindo que o resultado seja funcional, acessível e fácil de manter.
+              Estou sempre aberto a feedbacks para melhorar o produto final.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projetos" class="container section">
+      <div class="section-title">
+        <p data-i18n="projects_tag">Projetos</p>
+        <h2 data-i18n="projects_title">Aqui estão alguns dos meus trabalhos mais recentes.</h2>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3><i class='bx bx-data title-icon'></i>Gestão de Demandas</h3>
+          <p><strong data-i18n="label_problem">Problema:</strong> <span data-i18n="gd_problem_text">Equipes tinham baixa visibilidade das demandas e prazos.</span></p>
+          <p><strong data-i18n="label_implementation">Implementação:</strong> <span data-i18n="gd_impl_text">Dashboard com filtros avançados, fluxo de status e notificações em tempo real.</span></p>
+          <p><strong data-i18n="label_result">Resultado:</strong> <span data-i18n="gd_result_text">Gestão mais organizada, rápida e rastreável para gabinetes.</span></p>
+          <span>React • Node.js • PostgreSQL</span>
+          <a
+            class="project-preview"
+            href="https://www.gestaodedemandas.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir site Gestão de Demandas em nova aba"
+          >
+            <img
+              src="https://image.thum.io/get/width/1200/noanimate/https://www.gestaodedemandas.com"
+              alt="Prévia do site Gestão de Demandas"
+              loading="lazy"
+            >
+            <span class="preview-badge">Preview</span>
+          </a>
+          <div class="links project-links">
+            <a href="https://www.gestaodedemandas.com" target="_blank" rel="noopener noreferrer" data-i18n="view_project">Ver projeto</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3><i class='bx bx-cart-alt title-icon'></i>Missdell</h3>
+          <p><strong data-i18n="label_problem">Problema:</strong> <span data-i18n="miss_problem_text">Necessidade de loja online com jornada de compra simples.</span></p>
+          <p><strong data-i18n="label_implementation">Implementação:</strong> <span data-i18n="miss_impl_text">Front responsivo com catálogo, carrinho e checkout integrado.</span></p>
+          <p><strong data-i18n="label_result">Resultado:</strong> <span data-i18n="miss_result_text">Experiência fluida em mobile e desktop, favorecendo conversão.</span></p>
+          <span>React • Node.js • PostgreSQL</span>
+          <a
+            class="project-preview"
+            href="https://www.missdell.discloud.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir site Missdell em nova aba"
+          >
+            <img
+              src="../images/missdell.png"
+              alt="Prévia do site Missdell"
+              loading="lazy"
+            >
+            <span class="preview-badge">Preview</span>
+          </a>
+          <div class="links project-links">
+            <a href="https://www.missdell.discloud.app/" target="_blank" rel="noopener noreferrer" data-i18n="view_project">Ver projeto</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3><i class='bx bx-line-chart title-icon'></i>Finance Tracker</h3>
+          <p><strong data-i18n="label_problem">Problema:</strong> <span data-i18n="ft_problem_text">Falta de visão clara de gastos no dia a dia.</span></p>
+          <p><strong data-i18n="label_implementation">Implementação:</strong> <span data-i18n="ft_impl_text">App mobile com dashboard, gráficos e categorização de despesas.</span></p>
+          <p><strong data-i18n="label_result">Resultado:</strong> <span data-i18n="ft_result_text">Acompanhamento financeiro mais simples e decisões mais conscientes.</span></p>
+          <span>React Native • Node.js • PostgreSQL</span>
+          <a
+            class="project-preview"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir site Finance Tracker em nova aba"
+          >
+            <img
+              src="../images/finance-tracker.png"
+              alt="Prévia do site Finance Tracker"
+              loading="lazy"
+            >
+            <span class="preview-badge">Preview</span>
+          </a>
+          <div class="links project-links">
+            <h2 data-i18n="in_development">Em desenvolvimento</h2>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experiencia" class="container section">
+      <div class="section-title">
+        <p data-i18n="exp_tag">Experiência</p>
+        <h2 data-i18n="exp_title">Trajetória técnica</h2>
+      </div>
+      <ol class="timeline">
+        <li>
+          <span data-i18n="exp_1_period">2018 - 2019</span>
+          <h3 data-i18n="exp_1_title">Início autodidata</h3>
+          <i class='bx bx-bulb timeline-icon' aria-hidden="true"></i>
+          <p data-i18n="exp_1_text">Primeiros passos com logica de programação, criei meus primeiros plugins para Minecraft e me apaixonei por desenvolvimento.</p>
+        </li>
+        <li>
+          <span data-i18n="exp_2_period">2020 - 2022</span>
+          <h3 data-i18n="exp_2_title">Formação e projetos pessoais</h3>
+          <i class='bx bx-book-open timeline-icon' aria-hidden="true"></i>
+          <p data-i18n="exp_2_text">Estudo formal em desenvolvimento web, com foco em front-end. Criação de projetos autorais para aplicar conhecimentos e construir portfólio.</p>
+        </li>
+        <li>
+          <span data-i18n="exp_3_period">2023 - Atual</span>
+          <h3 data-i18n="exp_3_title">Experiência profissional</h3>
+          <i class='bx bx-briefcase timeline-icon' aria-hidden="true"></i>
+          <p data-i18n="exp_3_text">Atuação como desenvolvedor full stack em projetos reais, colaborando com equipes e entregando soluções digitais para clientes diversos, aprimorando habilidades técnicas e de trabalho em equipe.</p>
+        </li>
+        <li>
+          <span data-i18n="exp_4_period">Futuro</span>
+          <h3 data-i18n="exp_4_title">Próximos passos</h3>
+          <i class='bx bx-trending-up timeline-icon' aria-hidden="true"></i>
+          <p data-i18n="exp_4_text">Continuar evoluindo como desenvolvedor, buscando oportunidades desafiadoras para aplicar minhas habilidades e contribuir para projetos inovadores, enquanto me mantenho atualizado com as últimas tendências e tecnologias do mercado.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills" class="container section">
+      <div class="section-title">
+        <p>Skills</p>
+        <h2>Stack principal</h2>
+      </div>
+      <div class="skills-chips" aria-label="Lista de tecnologias">
+        <span>React</span>
+        <span>React Native</span>
+        <span>Node.js</span>
+        <span>PostgreSQL</span>
+        <span>JavaScript</span>
+        <span>TypeScript</span>
+        <span>PHP</span>
+        <span>Laravel</span>
+        <span>Docker</span>
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>Git/GitHub</span>
+        <span>APIs REST</span>
+        <span>UX/UI</span>
+        <span>Deploy</span>
+      </div>
+    </section>
+
+    <section id="contato" class="container section contact">
+      <div>
+        <p class="contact-kicker" data-i18n="contact_tag">Contato</p>
+        <h2 data-i18n="contact_title">Quer conversar sobre um projeto ou oportunidade?</h2>
+        <p class="contact-text" data-i18n="contact_text">Aberto a oportunidades freelancer e colaborações. Me envie uma mensagem para discutirmos como posso contribuir para o sucesso do seu projeto.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:suporterdx@gmail.com" target="_blank" rel="noopener noreferrer"><i class='bx bx-envelope'></i><span data-i18n="contact_email">Email</span></a>
+        <a href="https://www.linkedin.com/in/jo%C3%A3ovitorgomesmartins/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin-square'></i>LinkedIn</a>
+        <a href="https://github.com/Raidoxxx" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i>GitHub</a>
+        <a href="https://wa.me/13981365553" target="_blank" rel="noopener noreferrer"><i class='bx bxl-whatsapp'></i>WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 João Raidoxx</p>
+      <p data-i18n="footer_dev">Desenvolvido por João Raidoxx</p>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      const translations = {
+        pt: {
+          nav_about: "Sobre",
+          nav_projects: "Projetos",
+          nav_experience: "Experiência",
+          nav_contact: "Contato",
+          header_cta: "Disponível para Freelancer",
+          hero_tag: "Desenvolvedor Full Stack",
+          hero_title: "Desenvolvedor Full Stack focado em produto e performance.",
+          hero_text: "Construo interfaces e APIs com foco em UX, métricas e manutenção. React, Node.js e PostgreSQL para transformar necessidades de negócio em software confiável.",
+          hero_btn_projects: "Ver projetos",
+          hero_btn_contact: "Falar comigo",
+          hero_cv: "Currículo",
+          stat_projects: "projetos autorais",
+          stat_years: "anos de estudo contínuo",
+          stat_quality: "foco em qualidade",
+          hero_caption: "Disponível para freelancer • Remoto",
+          about_tag: "Sobre",
+          about_title: "Pronto para contribuir com seu projeto e crescer junto",
+          about_profile_title: "Perfil",
+          about_profile_text: "Transformei um hobby de infância em disciplina técnica. Hoje, meu objetivo é ajudar empresas a criar produtos digitais incríveis, enquanto continuo me desenvolvendo para evoluir minha carreira e contribuir cada vez mais.",
+          about_work_title: "Como trabalho",
+          about_work_text: "Primeiro, entendo a ideia e o público-alvo. Depois, planejo a estrutura e o design, focando em usabilidade e performance. Por fim, codifico com atenção aos detalhes, garantindo que o resultado seja funcional, acessível e fácil de manter. Estou sempre aberto a feedbacks para melhorar o produto final.",
+          projects_tag: "Projetos",
+          projects_title: "Aqui estão alguns dos meus trabalhos mais recentes.",
+          label_problem: "Problema:",
+          label_implementation: "Implementação:",
+          label_result: "Resultado:",
+          gd_problem_text: "Equipes tinham baixa visibilidade das demandas e prazos.",
+          gd_impl_text: "Dashboard com filtros avançados, fluxo de status e notificações em tempo real.",
+          gd_result_text: "Gestão mais organizada, rápida e rastreável para gabinetes.",
+          miss_problem_text: "Necessidade de loja online com jornada de compra simples.",
+          miss_impl_text: "Front responsivo com catálogo, carrinho e checkout integrado.",
+          miss_result_text: "Experiência fluida em mobile e desktop, favorecendo conversão.",
+          ft_problem_text: "Falta de visão clara de gastos no dia a dia.",
+          ft_impl_text: "App mobile com dashboard, gráficos e categorização de despesas.",
+          ft_result_text: "Acompanhamento financeiro mais simples e decisões mais conscientes.",
+          view_project: "Ver projeto",
+          in_development: "Em desenvolvimento",
+          exp_tag: "Experiência",
+          exp_title: "Trajetória técnica",
+          exp_1_period: "2018 - 2019",
+          exp_1_title: "Início autodidata",
+          exp_1_text: "Primeiros passos com logica de programação, criei meus primeiros plugins para Minecraft e me apaixonei por desenvolvimento.",
+          exp_2_period: "2020 - 2022",
+          exp_2_title: "Formação e projetos pessoais",
+          exp_2_text: "Estudo formal em desenvolvimento web, com foco em front-end. Criação de projetos autorais para aplicar conhecimentos e construir portfólio.",
+          exp_3_period: "2023 - Atual",
+          exp_3_title: "Experiência profissional",
+          exp_3_text: "Atuação como desenvolvedor full stack em projetos reais, colaborando com equipes e entregando soluções digitais para clientes diversos, aprimorando habilidades técnicas e de trabalho em equipe.",
+          exp_4_period: "Futuro",
+          exp_4_title: "Próximos passos",
+          exp_4_text: "Continuar evoluindo como desenvolvedor, buscando oportunidades desafiadoras para aplicar minhas habilidades e contribuir para projetos inovadores, enquanto me mantenho atualizado com as últimas tendências e tecnologias do mercado.",
+          contact_tag: "Contato",
+          contact_title: "Quer conversar sobre um projeto ou oportunidade?",
+          contact_text: "Aberto a oportunidades freelancer e colaborações. Me envie uma mensagem para discutirmos como posso contribuir para o sucesso do seu projeto.",
+          contact_email: "Email",
+          footer_dev: "Desenvolvido por João Raidoxx"
+        },
+        en: {
+          nav_about: "About",
+          nav_projects: "Projects",
+          nav_experience: "Experience",
+          nav_contact: "Contact",
+          header_cta: "Available for Freelance",
+          hero_tag: "Full Stack Developer",
+          hero_title: "Full Stack Developer focused on product and performance.",
+          hero_text: "I build interfaces and APIs focused on UX, metrics, and maintainability. React, Node.js, and PostgreSQL to turn business needs into reliable software.",
+          hero_btn_projects: "View projects",
+          hero_btn_contact: "Contact me",
+          hero_cv: "CV",
+          stat_projects: "authored projects",
+          stat_years: "years of continuous study",
+          stat_quality: "focus on quality",
+          hero_caption: "Available for freelance • Remote",
+          about_tag: "About",
+          about_title: "Ready to contribute to your project and grow together",
+          about_profile_title: "Profile",
+          about_profile_text: "I turned a childhood hobby into technical discipline. Today, my goal is to help companies build amazing digital products while continuing to evolve my career and contribute even more.",
+          about_work_title: "How I work",
+          about_work_text: "First, I understand the idea and target audience. Then, I plan the structure and design, focusing on usability and performance. Finally, I code with attention to detail, ensuring the result is functional, accessible, and easy to maintain. I am always open to feedback to improve the final product.",
+          projects_tag: "Projects",
+          projects_title: "Here are some of my most recent works.",
+          label_problem: "Problem:",
+          label_implementation: "Implementation:",
+          label_result: "Result:",
+          gd_problem_text: "Teams had low visibility into demands and deadlines.",
+          gd_impl_text: "Dashboard with advanced filters, status flow, and real-time notifications.",
+          gd_result_text: "More organized, faster, and traceable management for council offices.",
+          miss_problem_text: "Need for an online store with a simple purchase journey.",
+          miss_impl_text: "Responsive front-end with catalog, cart, and integrated checkout.",
+          miss_result_text: "Smooth mobile and desktop experience, improving conversion.",
+          ft_problem_text: "Lack of clear day-to-day expense visibility.",
+          ft_impl_text: "Mobile app with dashboard, charts, and expense categorization.",
+          ft_result_text: "Simpler financial tracking and more conscious decisions.",
+          view_project: "View project",
+          in_development: "In development",
+          exp_tag: "Experience",
+          exp_title: "Technical journey",
+          exp_1_period: "2018 - 2019",
+          exp_1_title: "Self-taught start",
+          exp_1_text: "First steps in programming logic, I created my first Minecraft plugins and fell in love with development.",
+          exp_2_period: "2020 - 2022",
+          exp_2_title: "Training and personal projects",
+          exp_2_text: "Formal web development studies focused on front-end. Built personal projects to apply knowledge and create a portfolio.",
+          exp_3_period: "2023 - Present",
+          exp_3_title: "Professional experience",
+          exp_3_text: "Worked as a full stack developer on real projects, collaborating with teams and delivering digital solutions for diverse clients, improving technical and teamwork skills.",
+          exp_4_period: "Future",
+          exp_4_title: "Next steps",
+          exp_4_text: "Keep evolving as a developer, seeking challenging opportunities to apply my skills and contribute to innovative projects while staying up to date with market trends and technologies.",
+          contact_tag: "Contact",
+          contact_title: "Want to talk about a project or opportunity?",
+          contact_text: "Open to freelance opportunities and collaborations. Send me a message so we can discuss how I can contribute to your project's success.",
+          contact_email: "Email",
+          footer_dev: "Developed by João Raidoxx"
+        }
+      };
+
+      const toggleBtn = document.getElementById("langToggle");
+      const langElements = document.querySelectorAll("[data-i18n]");
+
+      function applyLanguage(lang) {
+        const dict = translations[lang];
+        langElements.forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (dict[key]) el.textContent = dict[key];
+        });
+        document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
+        toggleBtn.textContent = lang === "pt" ? "EN" : "PT";
+        toggleBtn.setAttribute("aria-label", lang === "pt" ? "Switch language to English" : "Mudar idioma para português");
+        localStorage.setItem("site_lang", lang);
+      }
+
+      const savedLang = localStorage.getItem("site_lang");
+      applyLanguage(savedLang === "en" ? "en" : "pt");
+
+      toggleBtn.addEventListener("click", () => {
+        const currentLang = document.documentElement.lang.startsWith("en") ? "en" : "pt";
+        applyLanguage(currentLang === "pt" ? "en" : "pt");
+      });
+    })();
+  </script>
+</body>
+</html>
