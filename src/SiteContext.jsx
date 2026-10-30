@@ -4,7 +4,7 @@ import { PROFILE_COPY, PROFILE_IDS, PROFILE_LABELS, PROFILES, profileFromSearch 
 
 const SiteContext = createContext(null);
 export const useSite = () => useContext(SiteContext);
-export const THEMES = ['white', 'purple', 'blue'];
+export const THEMES = ['white', 'purple', 'blue', 'red'];
 
 function initialTheme() {
   try {
@@ -58,7 +58,7 @@ export function SiteProvider({ children }) {
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
-    const colors = { white: '#f8fafc', purple: '#130d21', blue: '#090f20' };
+    const colors = { white: '#f8fafc', purple: '#130d21', blue: '#090f20', red: '#160b0d' };
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', colors[theme]);
     try { localStorage.setItem('site_theme', theme); } catch { /* Optional preference. */ }
   }, [theme]);

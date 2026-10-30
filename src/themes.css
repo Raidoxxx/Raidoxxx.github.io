@@ -26,6 +26,20 @@
   --red-ink: #6d28b5;
   --line-ink: #24123733;
 }
+:root[data-theme="red"] {
+  --ink: #160b0d;
+  --ink-2: #251115;
+  --graphite: #30171c;
+  --paper: #fff0f0;
+  --text: #fff2f2;
+  --text-ink: #321015;
+  --muted: #d1adb2;
+  --muted-ink: #74474e;
+  --red: #c82734;
+  --red-text: #ff939c;
+  --red-ink: #b01f2d;
+  --line-ink: #32101533;
+}
 :root[data-theme="white"] {
   color-scheme: light;
   --ink: #f8fafc;
@@ -74,6 +88,7 @@
 .swatch-white { background: #fff; }
 .swatch-purple { background: #9b5de5; }
 .swatch-blue { background: #397ef5; }
+.swatch-red { background: #c82734; }
 .lang-toggle, .menu-toggle { flex-shrink: 0; }
 .lang-toggle:hover, .menu-toggle:hover { color: #fff; }
 .profile-picker { flex-shrink: 0; }

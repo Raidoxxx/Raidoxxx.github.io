@@ -1,4 +1,4 @@
-name: Deploy
+name: Build e Deploy
 
 on:
   push:
@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -38,3 +38,34 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  discloud:
+    name: Atualizar app na Discloud
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Conferir credencial da Discloud
+        env:
+          DISCLOUD_TOKEN: ${{ secrets.DISCLOUD_TOKEN }}
+        run: |
+          if [ -z "$DISCLOUD_TOKEN" ]; then
+            echo "::error::Cadastre DISCLOUD_TOKEN em Settings > Secrets and variables > Actions no repositorio."
+            exit 1
+          fi
+      - uses: actions/checkout@v4
+      - name: Publicar nova versao do app raidoxx
+        uses: discloud/deploy-action@fae7024653d941a19daa2b6f56d2ae208e008c54 # v1
+        with:
+          token: ${{ secrets.DISCLOUD_TOKEN }}
+          app_id: raidoxx
+          glob: |
+            package.json
+            package-lock.json
+            discloud.config
+            server.js
+            index.html
+            vite.config.js
+            src/**
+            public/**

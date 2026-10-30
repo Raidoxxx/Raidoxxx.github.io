@@ -63,5 +63,19 @@ O workflow `.github/workflows/deploy.yml` executa `npm ci` e `npm run build` e
 publica `dist/` a cada push na `main`. O `CNAME` será copiado para o build. Em outras hospedagens, configure o comando
 de build como `npm run build` e o diretório de saída como `dist`.
 
+### Atualização automática na Discloud
+
+O mesmo workflow publica o app `raidoxx` na Discloud depois que o build passa.
+Na Discloud, `BUILD=npm run build` gera o build e `START=npm start` inicia o
+servidor Node.js na porta 8080. Um build com erro não é enviado para o app.
+
+Para ativar, cadastre uma única vez o secret `DISCLOUD_TOKEN` em
+**Settings → Secrets and variables → Actions → New repository secret** no GitHub,
+usando o token disponível na aba **API Key** do painel da Discloud.
+Não coloque o token nos arquivos do projeto. Depois de cadastrar, execute
+**Actions → Build e Deploy → Run workflow**, ou envie um novo commit para `main`.
+Sem esse secret, o build continua funcionando e a etapa Discloud informa que a
+credencial está ausente. O deploy no GitHub Pages permanece independente.
+
 O formulário não usa backend nem armazena mensagens: o visitante confirma o
 envio no WhatsApp ou no aplicativo de e-mail.
