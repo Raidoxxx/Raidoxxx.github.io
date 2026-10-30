@@ -15,7 +15,7 @@ function useSaoPauloClock() {
 }
 
 export default function Hero() {
-  const { t } = useSite();
+  const { t, cvUrl } = useSite();
   const time = useSaoPauloClock();
   return (
     <section className="hero">
@@ -43,14 +43,14 @@ export default function Hero() {
             </div>
             <p className="hero-links">
               <span>{t('hero_recruiter')}</span>
-              <a href="/assets/cv.pdf" target="_blank" rel="noopener noreferrer"><i className="bx bx-download" aria-hidden="true"></i>{t('hero_cv')}</a>
+              <a href={cvUrl} target="_blank" rel="noopener noreferrer"><i className="bx bx-download" aria-hidden="true"></i>{t('hero_cv')}</a>
               <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer"><i className="bx bxl-linkedin" aria-hidden="true"></i>LinkedIn</a>
               <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer"><i className="bx bxl-github" aria-hidden="true"></i>GitHub</a>
             </p>
           </div>
 
           <aside className="hero-side">
-            <p className="hero-note"><span className="note-star" aria-hidden="true">✦</span>{t('hero_note')}</p>
+            <p className="hero-note"><span className="hero-rdx-logo" role="img" aria-label="RDX"></span><span>{t('hero_note')}</span></p>
             <ul className="hero-stats" aria-label={t('stats_label')}>
               <li><strong>2</strong><span><Lines text={t('stat_live')} /></span></li>
               <li><strong>2023</strong><span><Lines text={t('stat_since')} /></span></li>

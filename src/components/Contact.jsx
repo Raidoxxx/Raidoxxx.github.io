@@ -1,12 +1,14 @@
 import { useSite } from '../SiteContext.jsx';
 import { useLeadForm } from '../useLeadForm.js';
-import { EMAIL, GITHUB_URL, Kicker, LINKEDIN_URL, Mark, WHATSAPP_URL } from './ui.jsx';
+import { EMAIL, getWhatsAppUrl, GITHUB_URL, Kicker, LINKEDIN_URL, Mark } from './ui.jsx';
 
 const OPTIONS = ['opt_site', 'opt_system', 'opt_store', 'opt_app', 'opt_api', 'opt_fix', 'opt_job', 'opt_other'];
 
 export default function Contact() {
-  const { t, language, selectedService, setSelectedService } = useSite();
-  const { formError, handleSubmit } = useLeadForm(t, language);
+  const { t, language, selectedService, setSelectedService, profile } = useSite();
+  const { formError, handleSubmit } = useLeadForm(t, language, profile);
+  const serviceMessage = selectedService === 'opt_other' ? '' : `\n\n${t('whatsapp_service')} ${t(selectedService)}.`;
+  const whatsappUrl = getWhatsAppUrl(`${t('whatsapp_freelance')}${serviceMessage}`);
   return (
     <section id="contato" className="section ink contact">
       <div className="container contact-layout">
@@ -15,12 +17,12 @@ export default function Contact() {
           <h2 className="display">{t('contact_title_a')} <Mark>{t('contact_title_mark')}</Mark><span className="asterisk" aria-hidden="true">✦</span></h2>
           <p className="lead">{t('contact_text')}</p>
           <ul className="contact-links">
-            <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"><span className="ring"><i className="bx bxl-whatsapp" aria-hidden="true"></i></span><span>WhatsApp<small>(13) 98136-5553</small></span></a></li>
+            <li><a href={whatsappUrl} target="_blank" rel="noopener noreferrer"><span className="ring"><i className="bx bxl-whatsapp" aria-hidden="true"></i></span><span>WhatsApp<small>(13) 98136-5553</small></span></a></li>
             <li><a href={`mailto:${EMAIL}`}><span className="ring"><i className="bx bx-envelope" aria-hidden="true"></i></span><span>E-mail<small>{EMAIL}</small></span></a></li>
             <li><a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer"><span className="ring"><i className="bx bxl-linkedin" aria-hidden="true"></i></span><span>LinkedIn<small>joaovitorgomesmartins</small></span></a></li>
             <li><a href={GITHUB_URL} target="_blank" rel="noopener noreferrer"><span className="ring"><i className="bx bxl-github" aria-hidden="true"></i></span><span>GitHub<small>Raidoxxx</small></span></a></li>
           </ul>
-          <p className="available"><span className="ring ring-red"><i className="bx bx-right-arrow-alt" aria-hidden="true"></i></span>{t('contact_available')}</p>
+          <a className="btn btn-red available" href={whatsappUrl} target="_blank" rel="noopener noreferrer"><i className="bx bxl-whatsapp" aria-hidden="true"></i>{t('contact_available')}<i className="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
         </div>
 
         <div className="contact-panel">

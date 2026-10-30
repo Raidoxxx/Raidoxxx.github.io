@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 
-export const WHATSAPP_URL = 'https://wa.me/5513981365553';
+export const getWhatsAppUrl = message => `https://wa.me/5513981365553?text=${encodeURIComponent(message)}`;
+export const WHATSAPP_URL = getWhatsAppUrl('Olá, João! Vi seu portfólio e gostaria de conversar sobre um projeto. Podemos falar?');
 export const EMAIL = 'suporterdx@gmail.com';
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/jo%C3%A3ovitorgomesmartins/';
 export const GITHUB_URL = 'https://github.com/Raidoxxx';

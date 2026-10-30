@@ -3,7 +3,7 @@ import { useState } from 'react';
 const WHATSAPP_NUMBER = '5513981365553';
 const EMAIL = 'suporterdx@gmail.com';
 
-export function useLeadForm(t, language) {
+export function useLeadForm(t, language, profile = 'freelance') {
   const [formError, setFormError] = useState(false);
 
   function handleSubmit(event) {
@@ -24,7 +24,8 @@ export function useLeadForm(t, language) {
       : `Olá, João! Meu nome é ${name}.\nPreciso de: ${type}\n\n${message}\n\n(Enviado pelo seu portfólio)`;
     const channel = event.nativeEvent.submitter?.value || 'whatsapp';
     if (channel === 'email') {
-      const subject = `${english ? 'Project' : 'Projeto'}: ${type} — ${name}`;
+      const subjectLabel = profile === 'freelance' ? (english ? 'Project' : 'Projeto') : (english ? 'Opportunity' : 'Oportunidade');
+      const subject = `${subjectLabel}: ${type} — ${name}`;
       window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     } else {
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(body)}`, '_blank', 'noopener,noreferrer');

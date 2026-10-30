@@ -8,10 +8,10 @@ import About from './components/About.jsx';
 import FAQ from './components/FAQ.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
-import { Tapes, Tear, WHATSAPP_URL } from './components/ui.jsx';
+import { Tapes, Tear } from './components/ui.jsx';
 
 function Portfolio() {
-  const { t, floatingVisible } = useSite();
+  const { t, floatingVisible, whatsappUrl } = useSite();
   const tapeItems = ['svc_1_title', 'svc_2_title', 'svc_3_title', 'svc_4_title', 'svc_5_title', 'svc_6_title'].map(t);
   return (
     <>
@@ -35,7 +35,7 @@ function Portfolio() {
         <Contact />
       </main>
       <Footer />
-      <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label={t('wa_float')} className={'wa-float' + (floatingVisible ? ' is-visible' : '')}><i className="bx bxl-whatsapp" aria-hidden="true"></i></a>
+      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label={t('wa_float')} className={'wa-float' + (floatingVisible ? ' is-visible' : '')}><i className="bx bxl-whatsapp" aria-hidden="true"></i></a>
     </>
   );
 }

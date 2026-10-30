@@ -109,8 +109,8 @@ h1, h2, h3, h4 { line-height: 1.1; }
 .hero-links a i { font-size: 17px; color: var(--red-text); }
 .hero-links a:hover { color: var(--red-text); }
 .hero-side { align-self: center; }
-.hero-note { display: flex; align-items: center; gap: 16px; margin-bottom: 30px; font-size: 14px; line-height: 1.4; }
-.note-star { flex: 0 0 auto; display: grid; place-items: center; width: 52px; height: 52px; border: 1px solid var(--red); border-radius: 50%; color: var(--red-text); font-size: 18px; }
+.hero-note { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; margin-bottom: 30px; font-size: 14px; line-height: 1.4; }
+.hero-rdx-logo { display: block; width: min(100%, 220px); aspect-ratio: 418 / 257; background-color: var(--red-text); -webkit-mask: url('/Logo.svg') center / contain no-repeat; mask: url('/Logo.svg') center / contain no-repeat; }
 .hero-stats { list-style: none; margin: 0; padding: 0; }
 .hero-stats li { display: grid; grid-template-columns: 112px 1fr; align-items: center; gap: 12px; padding: 14px 0; border-top: 1px solid var(--line); }
 .hero-stats strong { font: 400 48px/1 var(--f-display); color: var(--red-text); }
@@ -285,7 +285,7 @@ h1, h2, h3, h4 { line-height: 1.1; }
 .contact-links a { display: flex; align-items: center; gap: 18px; padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 15px; font-weight: 700; }
 .contact-links small { display: block; font-size: 13px; font-weight: 400; color: var(--muted); }
 .contact-links a:hover .ring { background: var(--red); border-color: var(--red); }
-.available { display: flex; align-items: center; gap: 14px; margin-top: 30px; font: 700 12px var(--f-mono); text-transform: uppercase; letter-spacing: .14em; color: var(--red-text); }
+.available { margin-top: 30px; max-width: 100%; padding-block: 12px; text-align: center; }
 .contact-panel { position: relative; padding: 46px 40px 36px; color: #fff; background-color: var(--red); background-image: linear-gradient(160deg, #ffffff14, transparent 50%, #0000004d), var(--noise); background-blend-mode: normal, overlay; background-size: auto, 240px; clip-path: polygon(0 1%, 8% 0, 22% 1.2%, 37% .2%, 52% 1%, 66% 0, 81% 1.1%, 100% .3%, 99.5% 50%, 100% 99%, 84% 100%, 66% 99.1%, 48% 100%, 30% 99.2%, 13% 100%, 0 99.3%, .5% 50%); }
 .panel-hand { position: absolute; top: 26px; right: 30px; font-size: 46px; color: var(--ink); transform: rotate(-10deg); }
 .panel-title { max-width: 9ch; font: 400 clamp(2.6rem, 4.6vw, 4rem)/.92 var(--f-display); text-transform: uppercase; color: var(--ink); }

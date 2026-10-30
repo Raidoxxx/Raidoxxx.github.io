@@ -1,5 +1,6 @@
 import { useSite } from '../SiteContext.jsx';
 import { Kicker, Mark } from './ui.jsx';
+import { PROFILES } from '../profiles.js';
 
 const PROJECTS = [
   { key: 'gd', name: 'Gestão de Demandas', url: 'https://www.gestaodedemandas.com', stack: ['React', 'Node.js', 'PostgreSQL'] },
@@ -25,7 +26,8 @@ function Cover({ project, onError }) {
 }
 
 export default function Projects() {
-  const { t, handlePreviewError } = useSite();
+  const { t, handlePreviewError, profile } = useSite();
+  const projects = PROFILES[profile].projects.map(key => PROJECTS.find(project => project.key === key));
   return (
     <section id="projetos" className="section ink">
       <div className="container">
@@ -38,7 +40,7 @@ export default function Projects() {
         </div>
 
         <div className="projects-grid">
-          {PROJECTS.map((project, i) => {
+          {projects.map((project, i) => {
             const PreviewTag = project.url ? 'a' : 'div';
             const previewProps = project.url
               ? { href: project.url, target: '_blank', rel: 'noopener noreferrer', tabIndex: -1, 'aria-hidden': true }

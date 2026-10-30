@@ -1,6 +1,7 @@
 import { useSite } from '../SiteContext.jsx';
 import AsciiAngel from './AsciiAngel.jsx';
 import { Kicker, LINKEDIN_URL } from './ui.jsx';
+import { PROFILES } from '../profiles.js';
 
 const SKILLS = [
   ['Front-end', ['React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'UX/UI']],
@@ -17,7 +18,7 @@ const TIMELINE = [
 ];
 
 export default function About() {
-  const { t } = useSite();
+  const { t, profile, cvUrl } = useSite();
   return (
     <section id="sobre" className="section graphite">
       <div className="container">
@@ -37,7 +38,7 @@ export default function About() {
             <p className="about-text">{t('about_text_2')}</p>
             <p className="about-text about-hire">{t('about_text_3')}</p>
             <div className="about-actions">
-              <a className="btn btn-red" href="/assets/cv.pdf" target="_blank" rel="noopener noreferrer"><i className="bx bx-download" aria-hidden="true"></i>{t('about_cv')}</a>
+              <a className="btn btn-red" href={cvUrl} target="_blank" rel="noopener noreferrer"><i className="bx bx-download" aria-hidden="true"></i>{t('about_cv')}</a>
               <a className="btn btn-outline" href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer"><i className="bx bxl-linkedin" aria-hidden="true"></i>LinkedIn</a>
             </div>
           </div>
@@ -61,9 +62,9 @@ export default function About() {
           <div>
             <h3 className="cv-title">{t('skills_title')}</h3>
             <div className="skills">
-              {SKILLS.map(([group, items]) => (
+              {(PROFILES[profile].skills ?? SKILLS).map(([group, items]) => (
                 <div className="skill-group" key={group}>
-                  <h4>{group === 'skills_data' ? t(group) : group}</h4>
+                  <h4>{group === 'skills_data' || group.startsWith('profile_') ? t(group) : group}</h4>
                   <ul className="chips">{items.map(item => <li key={item}>{item}</li>)}</ul>
                 </div>
               ))}

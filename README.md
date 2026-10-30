@@ -3,7 +3,18 @@
 Site em React + Vite para **https://raidoxx.com.br**, com layout responsivo,
 idiomas português/inglês, FAQ e formulário que prepara mensagens para WhatsApp ou e-mail.
 
-## Desenvolvimento
+## Versões do portfólio
+
+- `/?perfil=freelance`: serviços, projetos para clientes e orçamento (versão padrão).
+- `/?perfil=backend`: APIs, dados, integrações e currículo de backend.
+- `/?perfil=fullstack`: interfaces, APIs, produtos completos e currículo full stack.
+
+O seletor no cabeçalho atualiza o link compartilhável. A versão é definida pelo
+link, sem depender de preferências salvas. Os botões de currículo em Backend e
+Full Stack abrem PDFs em português, copiados da pasta de currículos do autor.
+Os temas e o idioma funcionam em todas as versões.
+
+## Desenvolvimento local
 
 Use Node.js 20.19+ ou 22.12+.
 

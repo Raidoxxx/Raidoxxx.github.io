@@ -11,7 +11,7 @@ const SERVICES = [
 ];
 
 export default function Services() {
-  const { t, setSelectedService } = useSite();
+  const { t, setSelectedService, profile } = useSite();
   return (
     <section id="servicos" className="section paper">
       <div className="container">
@@ -36,7 +36,7 @@ export default function Services() {
               <p className="service-pain hand">{t(`${key}_pain`)}</p>
               <h3>{t(`${key}_title`)}</h3>
               <p className="service-text">{t(`${key}_text`)}</p>
-              <a className="service-link" href="#contato" onClick={() => setSelectedService(option)} aria-label={`${t('header_cta')}: ${t(`${key}_title`)}`}><i className="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+              <a className="service-link" href="#contato" onClick={() => setSelectedService(profile === 'freelance' ? option : 'opt_job')} aria-label={`${t('header_cta')}: ${t(`${key}_title`)}`}><i className="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
             </article>
           ))}
         </div>

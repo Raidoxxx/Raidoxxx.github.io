@@ -1,8 +1,8 @@
 import { useSite } from '../SiteContext.jsx';
-import { EMAIL, GITHUB_URL, LINKEDIN_URL, WHATSAPP_URL } from './ui.jsx';
+import { EMAIL, GITHUB_URL, LINKEDIN_URL } from './ui.jsx';
 
 export default function Footer() {
-  const { t } = useSite();
+  const { t, whatsappUrl: WHATSAPP_URL } = useSite();
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
