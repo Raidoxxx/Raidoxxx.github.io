@@ -3,6 +3,7 @@ import { useSite } from '../SiteContext.jsx';
 import { GITHUB_URL, LINKEDIN_URL, Lines } from './ui.jsx';
 import HalftoneAngel from './HalftoneAngel.jsx';
 import HalftoneLight from './HalftoneLight.jsx';
+import PhotoAscii from './PhotoAscii.jsx';
 
 function useSaoPauloClock() {
   const format = () => new Intl.DateTimeFormat('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit' }).format(new Date());
@@ -28,7 +29,7 @@ export default function Hero() {
 
       <div className="hero-stage">
         <p className="hero-word" aria-hidden="true">{t('hero_word')}</p>
-        <img className="hero-cutout" src="/images/minha-foto-cutout.webp" alt={t('hero_photo_alt')} width="800" height="1133" fetchPriority="high" decoding="async" />
+        <PhotoAscii />
         <HalftoneAngel className="hero-angel" />
 
         <div className="container hero-grid">
