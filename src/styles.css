@@ -162,11 +162,16 @@ h1, h2, h3, h4 { line-height: 1.1; }
 .service-pain { margin-top: 22px; font-size: 25px; color: var(--red-ink); transform: rotate(-1.5deg); transform-origin: left; }
 .service h3 { margin-top: 14px; font-size: 19px; font-weight: 800; text-transform: uppercase; letter-spacing: .01em; }
 .service-text { margin-top: 10px; font-size: 15px; color: var(--muted-ink); }
-.service-link { align-self: flex-start; margin-top: auto; padding-top: 18px; font-size: 26px; transition: transform .2s; }
-.service:hover { background: var(--ink); color: var(--paper); }
-.service:hover .service-pain, .service:hover .service-icon { color: var(--red-text); }
-.service:hover .service-text, .service:hover .service-num { color: var(--muted); }
-.service:hover .service-link { transform: translateX(6px); color: var(--red-text); }
+.service-link { align-self: flex-start; margin-top: auto; padding-top: 18px; font-size: 26px; }
+.service-link::after { content: ''; position: absolute; inset: 0; cursor: pointer; }
+.service-link i { display: inline-block; transition: transform .2s; }
+.service-link:focus-visible { outline: none; }
+.service-link:focus-visible::after { outline: 3px solid var(--red-text); outline-offset: -5px; }
+.service:hover, .service:focus-within { background: var(--ink); color: var(--paper); }
+.service:is(:hover, :focus-within) .service-pain, .service:is(:hover, :focus-within) .service-icon { color: var(--red-text); }
+.service:is(:hover, :focus-within) .service-text, .service:is(:hover, :focus-within) .service-num { color: var(--muted); }
+.service:is(:hover, :focus-within) .service-link { color: var(--red-text); }
+.service:is(:hover, :focus-within) .service-link i { transform: translateX(6px); }
 .services-more { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 18px; margin-top: 48px; font-size: 19px; font-weight: 700; }
 
 /* Projects */

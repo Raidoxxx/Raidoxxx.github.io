@@ -2,16 +2,16 @@ import { useSite } from '../SiteContext.jsx';
 import { Kicker, Mark } from './ui.jsx';
 
 const SERVICES = [
-  ['svc_1', 'bx-globe'],
-  ['svc_2', 'bx-grid-alt'],
-  ['svc_3', 'bx-store-alt'],
-  ['svc_4', 'bx-mobile-alt'],
-  ['svc_5', 'bx-git-merge'],
-  ['svc_6', 'bx-wrench'],
+  ['svc_1', 'bx-globe', 'opt_site'],
+  ['svc_2', 'bx-grid-alt', 'opt_system'],
+  ['svc_3', 'bx-store-alt', 'opt_store'],
+  ['svc_4', 'bx-mobile-alt', 'opt_app'],
+  ['svc_5', 'bx-git-merge', 'opt_api'],
+  ['svc_6', 'bx-wrench', 'opt_fix'],
 ];
 
 export default function Services() {
-  const { t } = useSite();
+  const { t, setSelectedService } = useSite();
   return (
     <section id="servicos" className="section paper">
       <div className="container">
@@ -27,7 +27,7 @@ export default function Services() {
         </div>
 
         <div className="services-grid">
-          {SERVICES.map(([key, icon], i) => (
+          {SERVICES.map(([key, icon, option], i) => (
             <article className="service" key={key}>
               <div className="service-top">
                 <i className={`bx ${icon} service-icon`} aria-hidden="true"></i>
@@ -36,7 +36,7 @@ export default function Services() {
               <p className="service-pain hand">{t(`${key}_pain`)}</p>
               <h3>{t(`${key}_title`)}</h3>
               <p className="service-text">{t(`${key}_text`)}</p>
-              <a className="service-link" href="#contato" aria-label={`${t('header_cta')}: ${t(`${key}_title`)}`}><i className="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+              <a className="service-link" href="#contato" onClick={() => setSelectedService(option)} aria-label={`${t('header_cta')}: ${t(`${key}_title`)}`}><i className="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
             </article>
           ))}
         </div>

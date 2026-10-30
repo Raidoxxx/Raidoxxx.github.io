@@ -5,7 +5,7 @@ import { EMAIL, GITHUB_URL, Kicker, LINKEDIN_URL, Mark, WHATSAPP_URL } from './u
 const OPTIONS = ['opt_site', 'opt_system', 'opt_store', 'opt_app', 'opt_api', 'opt_fix', 'opt_job', 'opt_other'];
 
 export default function Contact() {
-  const { t, language } = useSite();
+  const { t, language, selectedService, setSelectedService } = useSite();
   const { formError, handleSubmit } = useLeadForm(t, language);
   return (
     <section id="contato" className="section ink contact">
@@ -33,7 +33,7 @@ export default function Contact() {
             </div>
             <div className="field">
               <label htmlFor="lf_type">{t('form_type')}</label>
-              <select id="lf_type" name="type">
+              <select id="lf_type" name="type" value={selectedService} onChange={event => setSelectedService(event.target.value)}>
                 {OPTIONS.map(key => <option value={key} key={key}>{t(key)}</option>)}
               </select>
             </div>

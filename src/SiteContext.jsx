@@ -17,6 +17,7 @@ export function SiteProvider({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [floatingVisible, setFloatingVisible] = useState(false);
+  const [selectedService, setSelectedService] = useState('opt_site');
   const menuRef = useRef(null);
   const t = key => (language === 'en' ? en[key] : pt[key]) ?? pt[key] ?? key;
 
@@ -85,6 +86,7 @@ export function SiteProvider({ children }) {
     <SiteContext.Provider value={{
       t, language, toggleLanguage: () => setLanguage(value => value === 'pt' ? 'en' : 'pt'),
       menuOpen, setMenuOpen, menuRef, activeSection, floatingVisible, handlePreviewError,
+      selectedService, setSelectedService,
     }}>
       {children}
     </SiteContext.Provider>
